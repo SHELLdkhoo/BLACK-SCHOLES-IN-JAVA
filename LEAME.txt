@@ -1,0 +1,25 @@
+Este software proporciona código JAVA para la valoración de opciones utilizando Black Scholes. 
+Proporciona un conjunto de funciones JAVA para valores de opciones de Black Scholes, volatilidad implícita y griegos. 
+También proporciona una interfaz de uso gráfico usando Swing donde el usuario puede proporcionar el precio del activo, 
+ejercicio, tasa de interés, volatilidad y otros parámetros. 
+La GUI muestra instantáneamente los valores de las opciones y los griegos a medida que se cambian los parámetros de entrada.
+
+El código principal se publica bajo la GPL. La volatilidad implícita se calcula utilizando el `UnivariateRealSolver`
+de Apache Commons Mathematics Library (http://commons.apache.org/math/) que se publica bajo la licencia Apache por la Apache Software Foundation.
+
+Uso
+-----
+
+Para ejecutar la aplicación localmente, es suficiente tener los dos archivos jar: 
+el código real (`GenBS.jar`) y la biblioteca de matemáticas Apache Commons (` org.apache.commons.math.analysis.solvers.jar`).
+`java -jar GenBS.jar`
+
+Para ejecutarlo como una aplicación Java Web Start, se puede utilizar el archivo `GenBS.jnlp`.
+Esto también funcionará localmente (`javaws GenBS.jnlp`)
+
+Edificio
+--------
+
+El `build.xml` incluido permite que el código se compile desde la línea de comandos usando` apache ant`. 
+Ejecutar el comando `ant` desde la carpeta que contiene` build.xml` hará el trabajo. Ejecute `ant clean` 
+después de eso para eliminar los archivos de compilación intermedios.
